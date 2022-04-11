@@ -24,3 +24,36 @@ function ybbind(func, obj) {
 
 var test = ybbind(bar, obj);
 test();
+
+
+
+
+// 测试代码 格式化数据 写的玩的
+// function formatData(num) {
+//     let newNum = num.toFixed(2);
+//     let arr = newNum.split('.');
+//     let str0 = '';
+//     if(arr[0].length > 3) {
+//         let count = Math.floor(arr[0].length / 3);
+//         for(let i = count; i >= 0; i--) {
+//             if(i === 0) {
+//                 console.log(arr[0].length-(count * 3));
+//                 str0 = arr[0].substring(0, arr[0].length-(count * 3)) + str0;
+//             }else {
+//                 str0 = str0+=( ',' + arr[0].substr(i * -3, 3));
+//             }
+//         }
+        
+//     } else {
+//         str0 = arr[0]
+//     }
+//     let finalStr = str0 + '.' + arr[1];
+//     if(arr[0].length > 3 && arr[0].length % 3 === 0) {
+//         finalStr = finalStr.substring(1)
+//     } else {
+//         finalStr = finalStr.substring(0)
+//     }
+//     return finalStr;
+// }
+
+// console.log(formatData(500.5));
