@@ -23,9 +23,12 @@ function ybbind(func, obj) {
 }
 
 var test = ybbind(bar, obj);
-test();
+test(); // obj
 
+// 2.使用Function.prototype.bind
+const newFn = bar.bind(obj);
 
+newFn(); // obj
 
 
 // 测试代码 格式化数据 写的玩的
