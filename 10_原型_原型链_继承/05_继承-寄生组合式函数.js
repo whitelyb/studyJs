@@ -1,4 +1,5 @@
 function inheritPrototype(subType, superType) {
+    // 第一种方法
     subType.prototype = Object.create(superType.prototype)
     Object.defineProperty(subType.prototype, 'constructor', {
         enumerable: false,
@@ -6,6 +7,11 @@ function inheritPrototype(subType, superType) {
         writable: true,
         value: subType
     })
+
+    // 第二种方法
+    // var prototype = Object(superType.prototype);  //创建对象
+    // prototype.constructor = subType;              //增强对象
+    // subType.prototype = prototype;                //指定对象
 }
 
 function Person(name, age, friends) {
